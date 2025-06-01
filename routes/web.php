@@ -1,7 +1,18 @@
 <?php
 
+use App\Models\Book;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookController;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/cat', function () {
+   $books =  Book::all();
+   return $books;
+   dd([$book]);
+//    return view('welcome');
 });
+
+Route::get('/cat/create', [BookController::class, 'create']);
+
+
+
+//Route::get('/cat', [BookController::class, 'index']);
