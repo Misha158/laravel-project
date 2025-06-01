@@ -5,9 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 
 Route::get('/cat', function () {
-   $books =  Book::all();
-   return $books;
-   dd([$book]);
+//   $books =  Book::all();
+//   return $books;
+   dd('here');
 //    return view('welcome');
 });
 
